@@ -82,7 +82,7 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
 
 
       <ul className="sidebar-list">
-        {userRole === "ceo" && (
+        {userRole === "1" && (
           <>
             <li
               className={`sidebar-list-item ${
@@ -113,10 +113,10 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
             </li>
             <li
               className={`sidebar-list-item ${
-                isActive("/manage_attendance") ? "active" : ""
+                isActive("/employee/attendance") ? "active" : ""
               }`}
             >
-              <Link to="/manage_attendance">
+              <Link to="/employee/attendance">
                 <BsFillArchiveFill className="icon sidebar-icon" /> Manage Attendance
               </Link>
             </li>
@@ -196,7 +196,7 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
             </>
           )}
           ;
-          {userRole != "ceo" && (
+          {userRole != "1" && (
             <>
               <li className="sidebar-list-item">
                 <Link to="/employee_dashboard">
